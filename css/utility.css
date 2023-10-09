@@ -1,0 +1,402 @@
+/*------------------------------------------------------------------
+Project:  TravelPlore
+Version:  0.01
+Last change:  
+Assigned to:  Mohammad Risad
+Primary use:  Travel Agency and consultation 
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[LAYOUT]
+
+* body / header / footer / section / page-content 
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[COLOR CODES]
+
+# Text Color      :  
+# Primary Color #1089ff:  
+# Primary Light #f1f8ff;
+# Dark color: #000;
+# Light color: #fff;
+------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[TYPOGRAPHY]
+
+Body            : 14px/1.1 '', Poppins, sans-serif;
+Title           : 30px/1.5 '', Poppins, sans-serif;
+Title           : 16px/1.1 '', Poppins, sans-serif;
+Paragrap        : 14px/1.1 '', Poppins, sans-serif;
+-------------------------------------------------------------------*/
+
+/*[ FONT ]
+       Single Font Use in This Template 
+*/
+@font-face {
+    font-family: RobotoSlab;
+    src: url('../fonts/roboto_slab/RobotoSlab-Bold.ttf');
+}
+
+@font-face {
+    font-family: Courgette;
+    src: url('../fonts/courgette/Courgette-Regular.ttf');
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url('../fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: PoppinsMedium;
+    src: url('../fonts/poppins/Poppins-Medium.ttf');
+}
+
+/*[ RESTYLE TAG ]
+///////////////////////////////////////////////////////////
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ------------------------------------ */
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* ------------------------------------ */
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+/* ------------------------------------ */
+
+ul {
+    list-style: none;
+}
+
+a,
+.nav-link {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover,
+.nav-link:hover {
+    color: #000;
+}
+
+/* ------------------------------------ */
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+}
+
+.active {
+    color: var(--primary-color) !important;
+}
+
+/* ------------------------------------ */
+
+
+/* ------------------------------------ */
+:root {
+    --primary-color: #1089ff;
+    --primary-light: #f1f8ff;
+    --primary-dark: #0058C5;
+    --dark-color: #000;
+    --light-color: #fff;
+}
+
+
+/* ------------------------------------ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: RobotoSlab;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* ------------------------------------ */
+p,
+span,
+li,
+a,
+input,
+select,
+div,
+button {
+    font-family: Poppins;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+/***************************
+
+ section title
+
+***************************/
+.subtitle {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    display: block;
+    font-family: Courgette;
+}
+
+.title {
+    font-size: 35px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1212px !important;
+    }
+}
+
+
+/***************************
+
+breadcrumb style
+
+***************************/
+.breadcrumb {
+    background-image: url(../images/bg-img/breadcamb.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.breadcrumb::before {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    opacity: .6;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: -5;
+}
+
+.breadcrumb-content {
+    text-align: center;
+    color: #fff;
+}
+
+.breadcrumb-content h2 {
+    display: block;
+    font-size: 35px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.breadcrumb-content-list {
+    display: inline-block;
+}
+
+.breadcrumb-content-list li {
+    float: left;
+    margin-right: 20px;
+    position: relative;
+    list-style: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.breadcrumb-content-list li:first-child {
+    padding-left: 15px;
+}
+
+.breadcrumb-content-list li:first-child::before {
+    bottom: -1px;
+    content: "/";
+    position: absolute;
+    right: -14px;
+}
+
+.breadcrumb-content-list li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+
+/***************************
+ button slide effect
+***************************/
+.slide-button {
+    position: relative;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    /*-- optional ---*/
+    animation: leave 0.4s forwards;
+}
+
+.slide-button:hover {
+    animation: hover 0.4s forwards;
+}
+
+@keyframes hover {
+    from {
+        box-shadow: inset 0 0 0 0.01px var(--primary-color);
+    }
+
+    to {
+        box-shadow: inset 8.79928em 0 0 0.01px var(--primary-color);
+        color: #fff;
+    }
+}
+
+@keyframes leave {
+    from {
+        box-shadow: inset -8.79928em 0 0 0.01px var(--primary-color);
+        color: #fff;
+    }
+
+    to {
+        box-shadow: inset 0 0 0 0.01px var(--primary-color);
+    }
+}
+
+/***************************
+  common padding
+***************************/
+.section-padding {
+    padding: 120px 0;
+}
+
+/***************************
+  pagination style 
+***************************/
+.pagination-wrap {
+    margin-top: 40px;
+}
+
+.pagination-wrap .pagination-list {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination-wrap .pagination-list .item {
+    border: 1px solid #eaeaea;
+    margin-right: 10px;
+    border-radius: 4px;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.pagination-wrap .pagination-list .item .item-link {
+    color: #585c63;
+}
+
+.pagination-wrap .pagination-list .item:hover {
+    background: var(--primary-color);
+}
+
+.pagination-wrap .pagination-list .item:hover .item-link {
+    color: var(--light-color);
+}
+
+
+/***************************
+  Loaders animation 
+***************************/
+.loader {
+    background: var(--primary-light);
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    margin: 8px;
+    border: 8px solid var(--primary-color);
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: var(--primary-color) transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
