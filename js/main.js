@@ -189,8 +189,10 @@ $('.parallax100').parallax100();
 ======================================*/
 const activePage = window.location.pathname;
 const navLinks = document.querySelectorAll('.navbar-list li a').forEach(link => {
-  if (link.href.includes(`${activePage}`)) {
-    link.classList.add('active');
+  if(activePage.endsWith('.html')){
+    if (link.href.includes(`${activePage}`)) {
+      link.classList.add('active');
+   }
   }
 })
 
