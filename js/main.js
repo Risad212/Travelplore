@@ -191,6 +191,8 @@ const activePage = window.location.pathname;
 const navLinks = document.querySelectorAll('.navbar-list li a').forEach(link => {
   if (link.href.includes(`${activePage}`)) {
     link.classList.add('active');
+  }else{
+    querySelector('.navbar-list li a')[0].classList.add('active')
   }
 })
 
