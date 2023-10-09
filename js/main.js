@@ -193,8 +193,6 @@ const navLinks = document.querySelectorAll('.navbar-list li a').forEach(link => 
   if(activePage.endsWith('.html')){
     if (link.href.includes(`${activePage}`)) {
         link.classList.add('active');
-   }else{
-       document.querySelectorAll('.navbar-list li a')[0].classList.add('active')
    }
   }
 })
