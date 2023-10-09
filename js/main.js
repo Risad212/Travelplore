@@ -187,11 +187,12 @@ $('.parallax100').parallax100();
 
 /*[ active nav link ]
 ======================================*/
-const activePage = window.location.pathname;
+let arraypath = window.location.pathname.split('/')
+const activePage = arraypath[arraypath.length - 1];
 const navLinks = document.querySelectorAll('.navbar-list li a').forEach(link => {
   if(activePage.endsWith('.html')){
     if (link.href.includes(`${activePage}`)) {
-      link.classList.add('active');
+        link.classList.add('active');
    }
   }
 })
